@@ -1,0 +1,39 @@
+{
+  "patient_id": "002",
+  "name": "Maria Garcia",
+  "age": 32,
+  "gender": "Female",
+  "date_of_birth": "1992-08-22",
+  "ssn": "987-65-4321",
+  "address": "456 Oak Avenue, Buffalo, NY 14215",
+  "phone": "(716) 555-0456",
+  "email": "maria.garcia@email.com",
+  "insurance": "Aetna Health",
+  "policy_number": "AET987654321",
+  "medical_conditions": [
+    "Asthma",
+    "Seasonal Allergies",
+    "Anxiety Disorder"
+  ],
+  "current_medications": [
+    "Albuterol inhaler PRN",
+    "Fluticasone nasal spray daily",
+    "Sertraline 50mg daily"
+  ],
+  "allergies": ["Latex", "Pollen"],
+  "last_visit": "2024-12-01",
+  "chief_complaint": "Shortness of breath and chest tightness",
+  "vital_signs": {
+    "blood_pressure": "118/75",
+    "heart_rate": "88",
+    "temperature": "98.2°F",
+    "weight": "140 lbs",
+    "height": "5'5\""
+  },
+  "lab_results": {
+    "ige_level": "450 IU/mL",
+    "vitamin_d": "22 ng/mL",
+    "complete_blood_count": "Normal"
+  },
+  "notes": "Asthma symptoms worsening with seasonal changes. Discussed trigger avoidance and proper inhaler technique. Consider allergy testing."
+}

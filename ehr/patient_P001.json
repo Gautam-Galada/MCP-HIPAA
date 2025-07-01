@@ -1,0 +1,17 @@
+{
+  "patient_id": "P001",
+  "age": 45,
+  "gender": "M",
+  "diagnosis": "Type 2 Diabetes Mellitus",
+  "admission_date": "2024-01-15",
+  "discharge_date": "2024-01-18",
+  "notes": "Patient admitted with uncontrolled diabetes. Glucose levels stabilized with medication adjustment.",
+  "medications": [
+    "Metformin 500mg",
+    "Lisinopril 10mg"
+  ],
+  "allergies": [
+    "Penicillin"
+  ],
+  "status": "Stable"
+}

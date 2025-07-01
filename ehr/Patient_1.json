@@ -1,0 +1,39 @@
+{
+  "patient_id": "001",
+  "name": "John Smith",
+  "age": 45,
+  "gender": "Male",
+  "date_of_birth": "1979-03-15",
+  "ssn": "123-45-6789",
+  "address": "123 Main St, Buffalo, NY 14201",
+  "phone": "(716) 555-0123",
+  "email": "john.smith@email.com",
+  "insurance": "Blue Cross Blue Shield",
+  "policy_number": "BC123456789",
+  "medical_conditions": [
+    "Hypertension",
+    "Type 2 Diabetes",
+    "Mild Sleep Apnea"
+  ],
+  "current_medications": [
+    "Lisinopril 10mg daily",
+    "Metformin 500mg twice daily",
+    "Aspirin 81mg daily"
+  ],
+  "allergies": ["Penicillin", "Shellfish"],
+  "last_visit": "2024-11-15",
+  "chief_complaint": "Fatigue and increased thirst",
+  "vital_signs": {
+    "blood_pressure": "145/92",
+    "heart_rate": "78",
+    "temperature": "98.6°F",
+    "weight": "185 lbs",
+    "height": "5'10\""
+  },
+  "lab_results": {
+    "hba1c": "8.2%",
+    "glucose": "165 mg/dL",
+    "cholesterol": "220 mg/dL"
+  },
+  "notes": "Patient reports poor medication compliance. Discussed the importance of diabetes management and regular monitoring."
+}

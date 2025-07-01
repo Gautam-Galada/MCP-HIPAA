@@ -1,0 +1,42 @@
+{
+  "patient_id": "003",
+  "name": "Robert Johnson",
+  "age": 67,
+  "gender": "Male",
+  "date_of_birth": "1957-12-03",
+  "ssn": "456-78-9012",
+  "address": "789 Elm Street, Buffalo, NY 14222",
+  "phone": "(716) 555-0789",
+  "email": "robert.johnson@email.com",
+  "insurance": "Medicare",
+  "policy_number": "MED456789012",
+  "medical_conditions": [
+    "Coronary Artery Disease",
+    "Hyperlipidemia",
+    "Osteoarthritis",
+    "Benign Prostatic Hyperplasia"
+  ],
+  "current_medications": [
+    "Atorvastatin 40mg daily",
+    "Clopidogrel 75mg daily",
+    "Ibuprofen 400mg as needed",
+    "Tamsulosin 0.4mg daily"
+  ],
+  "allergies": ["Codeine"],
+  "last_visit": "2024-11-28",
+  "chief_complaint": "Chest pain on exertion and joint stiffness",
+  "vital_signs": {
+    "blood_pressure": "135/85",
+    "heart_rate": "72",
+    "temperature": "98.4°F",
+    "weight": "195 lbs",
+    "height": "5'8\""
+  },
+  "lab_results": {
+    "ldl_cholesterol": "145 mg/dL",
+    "hdl_cholesterol": "38 mg/dL",
+    "triglycerides": "180 mg/dL",
+    "creatinine": "1.2 mg/dL"
+  },
+  "notes": "Patient reports stable angina with mild exertion. Arthritis symptoms managed with NSAIDs. Consider cardiac stress test and joint imaging."
+}

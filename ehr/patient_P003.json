@@ -1,0 +1,17 @@
+{
+  "patient_id": "P003",
+  "age": 32,
+  "gender": "F",
+  "diagnosis": "Hypertension",
+  "admission_date": "2024-02-01",
+  "discharge_date": "2024-02-03",
+  "notes": "Elevated blood pressure managed with lifestyle changes and medication.",
+  "medications": [
+    "Lisinopril 5mg",
+    "Hydrochlorothiazide 25mg"
+  ],
+  "allergies": [
+    "Sulfa drugs"
+  ],
+  "status": "Stable"
+}

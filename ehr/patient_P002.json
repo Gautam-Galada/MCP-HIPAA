@@ -1,0 +1,17 @@
+{
+  "patient_id": "P002",
+  "age": 67,
+  "gender": "F",
+  "diagnosis": "Pneumonia",
+  "admission_date": "2024-01-20",
+  "discharge_date": "2024-01-25",
+  "notes": "Community-acquired pneumonia. Responded well to antibiotics.",
+  "medications": [
+    "Azithromycin 250mg",
+    "Albuterol inhaler"
+  ],
+  "allergies": [
+    "None known"
+  ],
+  "status": "Improved"
+}
