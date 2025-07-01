@@ -1,11 +1,11 @@
 # 🏥 HIPAA Medical Smart Agent (MCP-based CLI Demo)
 
-## 📌 Overview
+## Overview
 This project is an intermediate-level demonstration of a secure, HIPAA-conscious medical NLP system built using the MCP (Model Context Protocol) framework. It showcases role-based access control with local LLM inference (LLaMA3.2 via Ollama) and integrated X-ray analysis using torchxrayvision.
 
 The demo reflects a realistic healthcare workflow, enforcing PHI (Protected Health Information) redaction and comprehensive logging for doctors while allowing administrators unrestricted access—all without relying on expensive cloud APIs.
 
-## 👥 Roles Supported
+## Roles Supported
 - **Doctor** – HIPAA restrictions enabled: PHI masking, data filtering, strict audit logging
 - **Administrator** – HIPAA restrictions disabled: full access to patient data including PII
 
@@ -18,7 +18,7 @@ The demo reflects a realistic healthcare workflow, enforcing PHI (Protected Heal
 - **Real-time Interactive Experience** - no simulations, fully functional MCP system
 - **Local-only Processing** - no cloud APIs or external dependencies
 
-## 📁 Directory Structure
+## Directory Structure
 ```
 project/
 ├── client.py                           # CLI client entry point
@@ -111,7 +111,7 @@ Agent: Patient John Smith (SSN: 123-45-6789) at 123 Main St, Buffalo, NY has hyp
 Admin: quit
 ```
 
-## 🧠 Technical Implementation
+## Technical Implementation
 
 ### HIPAA Compliance Engine
 - **Data Masking**: Automatic redaction of SSN, addresses, phone numbers, emails
@@ -154,24 +154,24 @@ Disease predictions include:
 }
 ```
 
-## 📊 Logging System
+## Logging System
 
 ### Three-tier Logging:
 1. **audit.log** - All tool usage, access events, and system interactions
 2. **prompt.log** - Complete conversation history with timestamps
 3. **violations.log** - Detected HIPAA violation attempts and blocked requests
 
-## 🛠 Extension Points
+## Extension Points
 
 | Component | Extension Path |
 |-----------|----------------|
-| 🧰 **MCP Tools** | `src/server/tools/` + register in `tool_registry.py` |
-| 🧠 **AI Models** | `src/server/models/model_manager.py` |
-| ⚖️ **Compliance Rules** | `src/server/compliance/hipaa_compliance.py` |
-| 📺 **CLI Interface** | `src/client/ui_handler.py` |
-| ⌨️ **Input Processing** | `src/client/input_processor.py` |
+|  **MCP Tools** | `src/server/tools/` + register in `tool_registry.py` |
+|  **AI Models** | `src/server/models/model_manager.py` |
+|  **Compliance Rules** | `src/server/compliance/hipaa_compliance.py` |
+|  **CLI Interface** | `src/client/ui_handler.py` |
+|  **Input Processing** | `src/client/input_processor.py` |
 
-## 🔐 Security Features
+##  Security Features
 - Local-only processing (no external API calls)
 - Role-based data access control
 - Real-time PHI detection and masking
@@ -179,7 +179,7 @@ Disease predictions include:
 - Input sanitization and validation
 - Violation detection and blocking
 
-## 📋 Requirements
+##  Requirements
 ```
 torch
 torchvision
@@ -191,17 +191,16 @@ mcp-sdk
 python-dotenv
 ```
 
-## 🎯 Use Cases
+##  Use Cases
 - **Medical Training**: Demonstrate HIPAA-compliant AI interactions
 - **Healthcare IT**: Showcase role-based access in medical systems
 - **Compliance Testing**: Validate PHI protection mechanisms
 - **AI Integration**: Example of local LLM deployment in healthcare
 
-## ⚠️ Important Notes
+##  Important Notes
 - **No Authentication Required**: Role selection is demonstration-only
 - **Local Dependencies**: Requires running Ollama with llama3.2:latest
 - **Real-time System**: No simulations - fully functional MCP implementation
 - **HIPAA Demonstration**: Educational compliance showcase, not production-ready
-- **Windows Compatible**: No cryptography package dependencies
 
 Type `quit` at any time to exit the conversation and review logs.
