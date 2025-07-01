@@ -5,6 +5,14 @@ This project is an intermediate-level demonstration of a secure, HIPAA-conscious
 
 The demo reflects a realistic healthcare workflow, enforcing PHI (Protected Health Information) redaction and comprehensive logging for doctors while allowing administrators unrestricted access—all without relying on expensive cloud APIs.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9a8081b4-9e9c-4820-b648-bfc1d050bcf1" width="45%" />
+  <img src="https://github.com/user-attachments/assets/c8429627-8641-42dc-8627-6103e7ac1134" width="45%" />
+</p>
+
+
+
+
 ## Roles Supported
 - **Doctor** – HIPAA restrictions enabled: PHI masking, data filtering, strict audit logging
 - **Administrator** – HIPAA restrictions disabled: full access to patient data including PII
