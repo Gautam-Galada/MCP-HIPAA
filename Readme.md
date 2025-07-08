@@ -3,6 +3,97 @@
 ## Overview
 This project is an intermediate-level demonstration of a secure, HIPAA-conscious medical NLP system built using the MCP (Model Context Protocol) framework. It showcases role-based access control with local LLM inference (LLaMA3.2 via Ollama) and integrated X-ray analysis using torchxrayvision.
 
+## 🧠 System Architecture Diagram
+
+```mermaid
+flowchart TD
+  subgraph User
+    D(Doctor)
+    A(Admin)
+  end
+
+  subgraph CLI_Client["🖥️ CLI Client"]
+    InputProcessor[input_processor.py]
+    UIHandler[ui_handler.py]
+    HipaaClient[hipaa_client.py]
+  end
+
+  subgraph Server["🧠 MCP Server"]
+    ServerMain[server.py]
+    
+    subgraph Tools["🛠️ MCP Tools"]
+      PatientTool[patient_info_tool.py]
+      XrayTool[xray_analysis_tool.py]
+      ChatTool[chat_tool.py]
+    end
+
+    subgraph Compliance["🔐 HIPAA Compliance"]
+      Logger[hipaa_logger.py]
+      Masker[hipaa_compliance.py]
+    end
+
+    subgraph Models["📊 Models"]
+      ModelMgr[model_manager.py]
+    end
+
+    subgraph Utils["⚙️ Utils"]
+      DataLoader[data_loader.py]
+      LLaMAClient[llama_client.py]
+    end
+  end
+
+  subgraph EHR["📁 EHR + X-ray"]
+    JSONs[JSON Records]
+    XRays[X-ray PNGs]
+  end
+
+  subgraph Logs["🗂️ Logs"]
+    Audit[audit.log]
+    Prompt[prompt.log]
+    Violations[violations.log]
+  end
+
+  %% User flow
+  D -->|Role = Doctor| HipaaClient
+  A -->|Role = Admin| HipaaClient
+
+  %% Client interactions
+  HipaaClient --> UIHandler
+  HipaaClient --> InputProcessor
+  HipaaClient -->|Request| ServerMain
+
+  %% Server logic
+  ServerMain --> Tools
+  ServerMain --> Compliance
+  ServerMain --> Models
+  ServerMain --> Utils
+
+  %% Tool usage
+  PatientTool -->|Fetch| JSONs
+  XrayTool -->|Analyze| XRays
+  ChatTool -->|Query| LLaMAClient
+
+  %% Compliance layer
+  ServerMain --> Masker
+  ServerMain --> Logger
+
+  Masker -->|Mask PHI| PatientTool
+  Masker -->|Mask PHI| ChatTool
+  Logger --> Audit
+  Logger --> Prompt
+  Logger --> Violations
+
+  %% Model interaction
+  ModelMgr --> XrayTool
+  ModelMgr --> ChatTool
+
+  DataLoader --> PatientTool
+  DataLoader --> XrayTool
+
+  %% Logging output
+  ServerMain --> Logs
+```
+
 The demo reflects a realistic healthcare workflow, enforcing PHI (Protected Health Information) redaction and comprehensive logging for doctors while allowing administrators unrestricted access—all without relying on expensive cloud APIs.
 
 <p align="center">
